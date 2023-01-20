@@ -1,7 +1,7 @@
-let noteA = 52;
-let noteB = 64;
-let noteC = 24;
-let noteD = 75;
+let noteA = 10;
+let noteB = 50;
+let noteC = 90;
+let noteD = 40;
 
 
 function moyenne(A,B){
