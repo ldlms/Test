@@ -112,5 +112,50 @@ function monAnim(){
 
 requestAnimationFrame(monAnim);*/
 
+// ** addEventListener - focus - blur
+// TODO 1: récupérer l'input dans une variable leInput
+// TODO 2-1: sur leInput, utiliser addEventListener pour surveiller "focus" 
+// TODO 2-2:et execute une fonction qui modif la bg color de leInput en (couleur au choix)
+// TODO 3-1: sur leInput, utiliser addEventListener pour surveiller "blur"
+// TODO 3-2: et execute une fonction qui modif la bg color de leInput en blanc ou transparent
 
+/*let leInput = document.querySelector("input");
 
+leInput.addEventListener("focus",(event) => {event.target.style.background = 'red';});
+leInput.addEventListener("blur",(event) => {event.target.style.background = 'white';});*/
+
+// ** addEventListener - load
+// TODO 1: récupérer toutes les images dans une variable lesImages
+// TODO 2: Dans une v ariable tabImg on transforme lesImages en tableau avec Array.from()
+// TODO 3-1: Sur tabImg on utilise la fonction map().
+// TODO 3-2: Dans map(), on lui passe une F => qui prend 2 params : uneImage et index
+// TODO 3-3: Dansla F =>, sur uneImage on place un addEventListener qui écoute "load" et éxecute une Fonction
+// TODO 3-4: Dans la F du addEventListener, on affiche index en console
+
+/*let lesImages = document.querySelectorAll('img');
+let tabImage = Array.from(lesImages);
+
+console.log(tabImage);
+
+tabImage.map((uneImage,index) => {uneImage.addEventListener("load",console.log(index))});*/
+
+// ** addEventListener - capter un évènement "scroll" - scrollHeight  - innerHeight - scrollY
+// TODO 1: Dans une variable laBar, récupérer la div qui possède la classe .bar
+// TODO 2: Sur document, placer un addEventListener qui écoute "scroll" et execute une fonction
+// TODO 3: dans cette fonction, on console log document.body.scrollHeight (la hauteur de page), innerHeight (hauteur de l'affichage) et scrollY (la position du scroll)
+// TODO 4: Ensuite, dans une variable scrollMax, on soustrait à document.body.scrollHeight, innerHeight
+// TODO 5: Dans une variable onEstOu, on fait un pourcentage de scrollY sur scrollMax
+// TODO 6: Modifier dans le style de laBar, la width en lui assignant onEstOu en "%"
+
+let labar = document.getElementsByClassName('.bar');
+
+document.addEventListener("scroll",scrollbar);
+
+function scrollbar(){
+    console.log(document.body.scrollHeight);
+    console.log(innerHeight);
+    console.log(scrollY);
+    let scrollMax = document.body.scrollHeight - innerHeight;
+    let onEstOu = 100*scrollY/scrollMax;
+    labar.style.width = ;
+}
