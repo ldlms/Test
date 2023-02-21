@@ -147,7 +147,7 @@ tabImage.map((uneImage,index) => {uneImage.addEventListener("load",console.log(i
 // TODO 5: Dans une variable onEstOu, on fait un pourcentage de scrollY sur scrollMax
 // TODO 6: Modifier dans le style de laBar, la width en lui assignant onEstOu en "%"
 
-let labar = document.getElementsByClassName('.bar');
+let labar = document.querySelector('.bar');
 
 document.addEventListener("scroll",scrollbar);
 
@@ -157,5 +157,6 @@ function scrollbar(){
     console.log(scrollY);
     let scrollMax = document.body.scrollHeight - innerHeight;
     let onEstOu = 100*scrollY/scrollMax;
-    labar.style.width = ;
+    labar.setAttribute(width) = onEstOu;
+    console.log(labar.style.width);
 }
